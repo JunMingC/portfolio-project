@@ -6,3 +6,7 @@
   font-family: 'MyFont';
   src: local('MyFont'), url(./fonts/MyFont.woff) format('woff');
 }  */
+
+/* NPM Font */
+/* npm install @fontsource/roboto */
+/* Import .css in index.js */

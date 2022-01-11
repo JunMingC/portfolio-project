@@ -10,3 +10,11 @@
 /* NPM Font */
 /* npm install @fontsource/roboto */
 /* Import .css in index.js */
+
+body {
+  height: 100vh !important;
+}
+
+#root {
+  height: 100%;
+}

@@ -5,22 +5,32 @@ import React from 'react'
 const useStyles = makeStyles((theme) => {
     return {
         infoBar: {
-            height: '100%',
-            width: '300px',
-            backgroundColor: '#24242E',
+            position: 'fixed',
             display: 'flex',
             flexDirection: 'column',
+            height: '100vh',
+            width: '300px',
+            backgroundColor: '#1D1D26',
+            zIndex: 1,
+            boxShadow: 'rgb(12 12 16) 0px 0px 8px 0px',
+            transform: 'translate(-100%, 0)',
+            transition: 'transform .4s ease-in-out',
+            [theme.breakpoints.up('lg')]: {
+                height: `calc(100vh - ${theme.spacing(4)})`,
+                transform: 'none',
+            },
         },
         userSection: {
             height: '240px',
+            borderBottom: 'solid 3px #191921',
         },
         infoSection: {
-            backgroundColor: '#20202a',
+            backgroundColor: '#1A1A22',
             flexGrow: 1
         },
         resumeSection: {
             height: '50px',
-
+            borderTop: 'solid 3px #191921',
         },
     }
 })

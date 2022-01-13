@@ -11,10 +11,15 @@
 /* npm install @fontsource/roboto */
 /* Import .css in index.js */
 
-body {
-  height: 100vh !important;
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
 }
 
-#root {
-  height: 100%;
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
 }

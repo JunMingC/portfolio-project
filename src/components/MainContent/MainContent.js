@@ -9,18 +9,23 @@ const useStyles = makeStyles((theme) => {
         mainContent: {
             position: 'relative',
             flexGrow: 1,
-            backgroundColor: '#1E1E28',
+            backgroundColor: '#181820',
+            boxShadow: 'rgb(12 12 16) 0px 0px 8px 0px',
+            transition: 'margin-left .4s ease-in-out',
+            [theme.breakpoints.down('lg')]: {
+                marginTop: theme.mixins.toolbar.minHeight,
+            },
         },
         mainContentBg: {
             position: 'absolute',
             backgroundImage: 'url(bg.jpg)',
-            backgroundSize: 'cover',
+            backgroundSize: '120%',
             backgroundPosition: 'center',
             width: '100%',
             height: '400px',
         },
         mainContentBgFade: {
-            background: 'linear-gradient(180deg,rgba(30,30,40,.93) 0%,rgba(30,30,40,.96) 70%,rgba(30,30,40,.99) 80%,#1e1e28 100%)',
+            background: 'linear-gradient(rgba(24, 24, 32, 0.93) 0%, rgba(24, 24, 32, 0.96) 70%, rgba(24, 24, 32, 0.99) 80%, rgb(24, 24, 32) 100%)',
             width: '100%',
             height: '100%',
         },
@@ -45,7 +50,7 @@ const MainContent = () => {
     const classes = useStyles();
 
     return (
-        <Box className={classes.mainContent}>
+        <Box className={classes.mainContent} ml={{ lg: '300px' }}>
             <Box className={classes.mainContentBg} >
                 <Box className={classes.mainContentBgFade} />
             </Box>

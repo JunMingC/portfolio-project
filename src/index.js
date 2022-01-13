@@ -14,13 +14,20 @@ import '@fontsource/roboto/700.css';
 
 const theme = createTheme({
     palette: {
+        primary: {
+            main: '#191921',
+            contrastText: '#E8E6E3',
+        },
+        secondary: {
+            main: '#C89600'
+        },
         background: {
-            default: '#191923'
+            default: '#14141C'
         },
         text: {
-            primary: '#ffffff',
-            secondary: '#8c8c8e',
-            highlight: '#ffc107'
+            primary: '#E8E6E3',
+            secondary: '#FFC71E',
+            third: '#A0988B',
         }
     }
 });

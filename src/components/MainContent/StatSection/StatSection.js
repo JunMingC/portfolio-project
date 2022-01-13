@@ -1,26 +1,32 @@
-import { Box } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Box, Grid } from '@mui/material';
 import React from 'react'
-
-const useStyles = makeStyles((theme) => {
-    return {
-        statSection: {
-            height: '1500px',
-        },
-    }
-})
+import StatItem from './StatItem';
 
 const StatSection = () => {
-    const classes = useStyles();
+    const years = new Date().getFullYear() - 2018 - 1;
 
     return (
-        <Box className={classes.statSection}>
-            statSection
-            {/* use MUI 5 grid */}
-            {/* Years of Experience */}
-            {/* 3.81 CGPA [First Class Honors] */}
-            {/* Total Views after have backend */}
-            {/* Current Views  */}
+        <Box my={3}>
+            <Grid container rowSpacing={2} columnSpacing={8}>
+                <Grid item xs={12} sm={4}>
+                    <StatItem
+                        score={`${years} +`}
+                        title={'Years Experience'}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <StatItem
+                        score={'3.81'}
+                        title={'CGPA'}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <StatItem
+                        score={'5'}
+                        title={'Personal Projects'}
+                    />
+                </Grid>
+            </Grid>
         </Box>
     )
 }

@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react'
 import BannerSection from './BannerSection/BannerSection';
+import ProjectSection from './ProjectSection/ProjectSection';
 import StatSection from './StatSection/StatSection';
 
 const useStyles = makeStyles((theme) => {
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => {
         mainContentBg: {
             position: 'absolute',
             backgroundImage: 'url(bg.jpg)',
-            backgroundSize: '120%',
+            backgroundSize: 'cover',
             backgroundPosition: 'center',
             width: '100%',
             height: '400px',
@@ -33,12 +34,6 @@ const useStyles = makeStyles((theme) => {
             position: 'relative',
             display: 'flex',
             flexDirection: 'column',
-        },
-        statSection: {
-
-        },
-        projectSection: {
-
         },
         experienceSection: {
 
@@ -57,11 +52,10 @@ const MainContent = () => {
             <Box className={classes.content} px={{ xs: 2, lg: 4 }}>
                 <BannerSection />
                 <StatSection />
-                <Box className={classes.projectSection}>
-                    projectSection
-                </Box>
+                <ProjectSection />
                 <Box className={classes.experienceSection}>
                     experienceSection
+                    https://codesandbox.io/s/r4ujh?file=/demo.js
                 </Box>
             </Box>
         </Box>

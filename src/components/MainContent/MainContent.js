@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React from 'react'
+import React from 'react';
 import BannerSection from './BannerSection/BannerSection';
+import ExperienceSection from './ExperienceSection/ExperienceSection';
 import ProjectSection from './ProjectSection/ProjectSection';
 import StatSection from './StatSection/StatSection';
 
@@ -35,9 +36,6 @@ const useStyles = makeStyles((theme) => {
             display: 'flex',
             flexDirection: 'column',
         },
-        experienceSection: {
-
-        },
     }
 })
 
@@ -53,10 +51,7 @@ const MainContent = () => {
                 <BannerSection />
                 <StatSection />
                 <ProjectSection />
-                <Box className={classes.experienceSection}>
-                    experienceSection
-                    https://codesandbox.io/s/r4ujh?file=/demo.js
-                </Box>
+                <ExperienceSection />
             </Box>
         </Box>
     )

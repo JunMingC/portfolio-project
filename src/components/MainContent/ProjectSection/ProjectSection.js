@@ -29,7 +29,7 @@ const ProjectSection = () => {
                     <ProjectItem
                         title={'Portfolio'}
                         description={"Front-End Web Application personalized to showcase user's skills, qualifications, education and work experiences in a creative way."}
-                        tools={'React, Material-UI'}
+                        tools={'ReactJS, Material-UI'}
                         link={'https://github.com/JunMingC/portfolio-project'}
                     />
                 </Grid>
@@ -37,7 +37,7 @@ const ProjectSection = () => {
                     <ProjectItem
                         title={'Memories'}
                         description={'Full Stack MERN Application for a simple social media app that allows users to post interesting events happened in their lives.'}
-                        tools={'React, Redux, Material-UI'}
+                        tools={'MongoDB, Express.js, ReactJS, Node.js'}
                         link={'https://github.com/JunMingC/memories_project'}
                     />
                 </Grid>

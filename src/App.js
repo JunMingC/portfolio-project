@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => {
                     left: 0,
                     bottom: 0,
                     zIndex: 2,
-                    background: "#14141C",
+                    background: theme.palette.background.default,
                     width: '100%',
                     height: theme.spacing(2),
                     content: '""',

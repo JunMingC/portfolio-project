@@ -78,7 +78,6 @@ const BannerSection = () => {
                     <Typewriter
                         onInit={typeWriter}
                         options={{
-                            autoStart: true,
                             loop: true,
                         }}
                     />

@@ -1,6 +1,8 @@
 import { Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react'
+import InfoSection from './InfoSection/InfoSection';
+import UserSection from './UserSection/UserSection';
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -20,14 +22,6 @@ const useStyles = makeStyles((theme) => {
                 transform: 'none',
             },
         },
-        userSection: {
-            height: '240px',
-            borderBottom: 'solid 3px #191921',
-        },
-        infoSection: {
-            backgroundColor: '#1A1A22',
-            flexGrow: 1
-        },
         resumeSection: {
             height: '50px',
             borderTop: 'solid 3px #191921',
@@ -40,12 +34,8 @@ const InfoBar = () => {
 
     return (
         <Box className={classes.infoBar}>
-            <Box className={classes.userSection} py={2} px={4}>
-                userSection
-            </Box>
-            <Box className={classes.infoSection} py={2} px={4}>
-                infoSection
-            </Box>
+            <UserSection />
+            <InfoSection />
             <Box className={classes.resumeSection} py={2} px={4}>
                 resumeSection
             </Box>

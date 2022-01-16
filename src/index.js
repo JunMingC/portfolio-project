@@ -25,6 +25,9 @@ const theme = createTheme({
         third: {
             main: '#A0988B',
         },
+        fourth: {
+            main: '#b79126',
+        },
         background: {
             default: '#14141C'
         },
@@ -32,6 +35,7 @@ const theme = createTheme({
             primary: '#E8E6E3',
             secondary: '#FFC71E',
             third: '#A0988B',
+            fourth: '#c89600',
         }
     },
 });

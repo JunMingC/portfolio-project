@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => {
             fontWeight: 600,
         },
         expContentPositionTxt: {
-            fontSize: 12,
+            fontSize: 13,
         },
         expContentDate: {
             width: '155px',
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => {
             fontSize: 12,
         },
         expContentDetailTxt: {
-            fontSize: 13,
+            fontSize: 14,
         },
     }
 })

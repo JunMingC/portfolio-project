@@ -59,7 +59,7 @@ const ProjectSection = () => {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                     <ProjectItem
-                        title={'Torch Hallway'}
+                        title={'TorchHallway'}
                         description={'Horror Game that make use of light system and spatial sound system to create a thrilling maze escape experience.'}
                         tools={'Unity'}
                         link={'https://github.com/JunMingC/Torch-Hallway'}

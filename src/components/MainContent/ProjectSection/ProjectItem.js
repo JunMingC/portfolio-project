@@ -56,6 +56,7 @@ const ProjectItem = ({ title, description, tools, link }) => {
                 size='small'
                 endIcon={<ArrowForwardIosIcon className={classes.projectButtonIcon} />}
                 href={link}
+                target='_blank'
             >
                 GITHUB
             </Button>

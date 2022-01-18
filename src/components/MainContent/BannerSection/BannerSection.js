@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import Typewriter from 'typewriter-effect';
 import React from 'react';
+import SocialStack from './SocialStack';
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -9,6 +10,11 @@ const useStyles = makeStyles((theme) => {
             position: 'relative',
             width: '100%',
             minHeight: '300px',
+            display: 'flex',
+            flexDirection: 'column',
+            [theme.breakpoints.down('sm')]: {
+                minHeight: '380px',
+            },
         },
         banner: {
             position: 'absolute',
@@ -70,7 +76,7 @@ const BannerSection = () => {
             <Box className={classes.banner}>
                 <Box className={classes.bannerFade} />
             </Box>
-            <Box className={classes.bannerContent} p={8}>
+            <Box className={classes.bannerContent} p={8} pb={2}>
                 <Typography className={classes.bannerContentTitleTxt} color='text.primary' mb={2}>
                     Welcome to my Portfolio!
                 </Typography>
@@ -83,6 +89,7 @@ const BannerSection = () => {
                     />
                 </Typography>
             </Box>
+            <SocialStack />
         </Box>
     )
 }

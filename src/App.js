@@ -3,8 +3,9 @@ import { makeStyles } from '@mui/styles';
 import InfoBar from './components/InfoBar/InfoBar';
 import MainContent from './components/MainContent/MainContent';
 import Header from './components/Header/Header';
-import ScrollBtn from './components/ScrollBtn/ScrollBtn';
+import ScrollBtn from './components/Shared/ScrollBtn/ScrollBtn';
 import React from 'react'
+import Overlay from './components/Shared/Overlay/Overlay';
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -42,6 +43,7 @@ const App = () => {
             <InfoBar />
             <MainContent />
             <ScrollBtn />
+            <Overlay />
         </Box>
     );
 }

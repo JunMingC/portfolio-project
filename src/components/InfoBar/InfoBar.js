@@ -1,8 +1,15 @@
-import { Box } from '@mui/material';
+import { Box, useMediaQuery } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { setInfoBar } from '../../redux/features/infoBarSlice';
 import InfoSection from './InfoSection/InfoSection';
+import ResumeSection from './ResumeSection/ResumeSection';
 import UserSection from './UserSection/UserSection';
+import InfoBtn from '../Shared/InfoBtn/InfoBtn';
+import { setOverlay } from '../../redux/features/overlaySlice';
+import useAfterEffect from '../../hooks/useAfterEffect';
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -13,7 +20,7 @@ const useStyles = makeStyles((theme) => {
             height: '100vh',
             width: '300px',
             backgroundColor: '#1D1D26',
-            zIndex: 1,
+            zIndex: 9999,
             boxShadow: 'rgb(12 12 16) 0px 0px 8px 0px',
             transform: 'translate(-100%, 0)',
             transition: 'transform .4s ease-in-out',
@@ -22,23 +29,51 @@ const useStyles = makeStyles((theme) => {
                 transform: 'none',
             },
         },
-        resumeSection: {
-            height: '50px',
-            borderTop: 'solid 3px #191921',
+        infoBarActive: {
+            transform: 'none',
+        },
+        infoBarBtn: {
+            position: 'absolute',
+            right: '-12px',
+            top: 0,
         },
     }
 })
 
 const InfoBar = () => {
     const classes = useStyles();
+    const infoBar = useSelector((state) => state.infoBar);
+    const dispatch = useDispatch();
+    const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'), { noSsr: false });
+    const { contentRef, registerListener, removeListener } = useOutsideClick(closeInfoBar);
+
+    useAfterEffect(() => {
+        dispatch(setInfoBar({ active: false }));
+
+    }, [dispatch, isLargeScreen])
+
+    useAfterEffect(() => {
+        dispatch(setOverlay({ active: infoBar.active }));
+        if (infoBar.active) registerListener();
+        else removeListener();
+
+    }, [dispatch, infoBar, registerListener, removeListener])
+
+    function closeInfoBar() {
+        dispatch(setInfoBar({ active: false }));
+    }
 
     return (
-        <Box className={classes.infoBar}>
+        <Box className={`${classes.infoBar} ${infoBar.active ? classes.infoBarActive : ''}`} ref={contentRef}>
             <UserSection />
             <InfoSection />
-            <Box className={classes.resumeSection} py={2} px={4}>
-                resumeSection
-            </Box>
+            <ResumeSection />
+            {
+                !isLargeScreen &&
+                <Box className={classes.infoBarBtn}>
+                    <InfoBtn invert />
+                </Box>
+            }
         </Box>
     )
 }

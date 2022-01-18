@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => {
         mainContent: {
             position: 'relative',
             flexGrow: 1,
-            backgroundColor: '#181820',
+            backgroundColor: theme.palette.mainContent.main,
             boxShadow: 'rgb(12 12 16) 0px 0px 8px 0px',
             transition: 'margin-left .4s ease-in-out',
             [theme.breakpoints.down('lg')]: {

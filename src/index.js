@@ -28,6 +28,12 @@ const theme = createTheme({
         fourth: {
             main: '#b79126',
         },
+        white: {
+            main: '#E8E6E3',
+        },
+        mainContent: {
+            main: '#181820',
+        },
         background: {
             default: '#14141C'
         },

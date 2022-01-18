@@ -19,7 +19,7 @@ const ExperienceSection = () => {
     const classes = useStyles();
 
     return (
-        <Box className={classes.experienceSection} my={3}>
+        <Box className={classes.experienceSection} my={3} mb={5}>
             <Grid container spacing={4}>
                 <Grid item xs={12} md={6}>
                     <Box>

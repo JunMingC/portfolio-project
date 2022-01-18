@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => {
             height: '400px',
         },
         mainContentBgFade: {
-            background: 'linear-gradient(rgba(24, 24, 32, 0.93) 0%, rgba(24, 24, 32, 0.96) 70%, rgba(24, 24, 32, 0.99) 80%, rgb(24, 24, 32) 100%)',
+            background: 'linear-gradient(rgba(24, 24, 32, 0.9) 0%, rgba(24, 24, 32, 0.96) 70%, rgba(24, 24, 32, 0.99) 80%, rgb(24, 24, 32) 100%)',
             width: '100%',
             height: '100%',
         },

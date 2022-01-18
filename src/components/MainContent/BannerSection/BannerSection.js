@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => {
             height: '100%',
         },
         bannerFade: {
-            background: 'linear-gradient(90deg, rgba(36, 36, 46, 0.9) 15%, rgba(36, 36, 46, 0.7) 50%, rgba(36, 39, 41, 0.7) 100%)',
+            background: 'linear-gradient(90deg, rgba(36, 36, 46, 0.8) 15%, rgba(36, 36, 46, 0.7) 50%, rgba(36, 39, 41, 0.7) 100%)',
             width: '100%',
             height: '100%',
         },

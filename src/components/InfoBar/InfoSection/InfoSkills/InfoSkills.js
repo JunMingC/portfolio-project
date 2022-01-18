@@ -4,6 +4,11 @@ import React from 'react';
 
 const useStyles = makeStyles((theme) => {
     return {
+        infoSkill: {
+            '&:last-child': {
+                marginBottom: '0'
+            },
+        },
         infoSkillTitleTxt: {
             fontSize: '14px',
             textTransform: 'capitalize',
@@ -25,19 +30,19 @@ const InfoSkill = () => {
     const classes = useStyles();
 
     const skills = {
-        programming: ['JavaScript', 'TypeScript', 'C#'],
-        'web & database': ['HTML', 'CSS', 'SignalR', 'SQL (MS SQL Server)'],
-        frameworks: ['ReactJS', 'Express.js', 'ASP.NET', 'ASP.NET Core'],
-        tools: ['Git', 'SVN', 'Postman', 'Visual Studio', 'Visual Studio Code', 'Unity'],
+        'Programming': ['JavaScript', 'TypeScript', 'C#', 'SQL', 'HTML', 'CSS'],
+        'Front-End': ['ReactJS', 'Material-UI', 'Redux', 'Redux Toolkit'],
+        'Back-End': ['Express.js', 'Node.js', 'SignalR', 'ASP.NET', 'ASP.NET Core'],
+        'Tools': ['Git', 'SVN', 'Postman', 'Visual Studio Code', 'Unity'],
     };
 
     return (
         Object.keys(skills).map((skillTitle, index) => (
-            <Box key={index} mb={2}>
-                <Typography className={classes.infoSkillTitleTxt} component='div' color='text.primary' mb={'5px'}>
+            <Box className={classes.infoSkill} key={index} mb={3}>
+                <Typography className={classes.infoSkillTitleTxt} component='div' color='text.primary' mb={1}>
                     {skillTitle}
                 </Typography>
-                <Grid container justifyContent={'flex-start'} spacing={1}>
+                <Grid container justifyContent={'flex-start'} spacing={1.5}>
                     {
                         skills[skillTitle].map((skill, index) => (
                             <Grid item key={index}>

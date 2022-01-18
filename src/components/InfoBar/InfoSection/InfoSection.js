@@ -10,9 +10,10 @@ const useStyles = makeStyles((theme) => {
             flexGrow: 1,
             backgroundColor: '#1A1A22',
             overflow: 'auto',
+            scrollbarWidth: 'thin',
             '&::-webkit-scrollbar': {
-                display: 'none',
-            }
+               width: '8px',
+            },
         },
         infoDivider: {
             width: '100%',

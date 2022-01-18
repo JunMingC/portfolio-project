@@ -23,3 +23,11 @@
 ::-webkit-scrollbar-thumb {
     background-color: #454a4d;
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+:root{
+    scrollbar-color: #454a4d #181a1b;
+}

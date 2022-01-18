@@ -1,6 +1,6 @@
 import { Box, useMediaQuery } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setInfoBar } from '../../redux/features/infoBarSlice';
 import InfoSection from './InfoSection/InfoSection';
@@ -46,18 +46,29 @@ const InfoBar = () => {
     const dispatch = useDispatch();
     const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'), { noSsr: false });
     const { contentRef, registerListener, removeListener } = useOutsideClick(closeInfoBar);
+    const firstRender = useRef(true);
 
     useAfterEffect(() => {
+        if (firstRender.current) return;
         dispatch(setInfoBar({ active: false }));
 
     }, [dispatch, isLargeScreen])
 
-    useAfterEffect(() => {
+    useEffect(() => {
+        if (firstRender.current) return;
+
         dispatch(setOverlay({ active: infoBar.active }));
         if (infoBar.active) registerListener();
         else removeListener();
 
     }, [dispatch, infoBar, registerListener, removeListener])
+
+    useEffect(() => {
+        if (firstRender.current) {
+            firstRender.current = false;
+            return;
+        }
+    }, []);
 
     function closeInfoBar() {
         dispatch(setInfoBar({ active: false }));

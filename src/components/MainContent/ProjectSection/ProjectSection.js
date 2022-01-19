@@ -29,7 +29,7 @@ const ProjectSection = () => {
                     <ProjectItem
                         title={'Portfolio'}
                         description={"Front-End Web Application personalized to showcase user's skills, qualifications, education and work experiences in a creative way."}
-                        tools={'ReactJS, Material-UI'}
+                        tools={'ReactJS, Redux Toolkit, Material-UI'}
                         link={'https://github.com/JunMingC/portfolio-project'}
                     />
                 </Grid>

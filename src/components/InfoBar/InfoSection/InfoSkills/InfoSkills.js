@@ -32,7 +32,7 @@ const InfoSkill = () => {
     const skills = {
         'Programming': ['JavaScript', 'TypeScript', 'C#', 'SQL', 'HTML', 'CSS'],
         'Front-End': ['ReactJS', 'Material-UI', 'Redux', 'Redux Toolkit'],
-        'Back-End': ['Express.js', 'Node.js', 'SignalR', 'ASP.NET', 'ASP.NET Core'],
+        'Back-End': ['Express.js', 'Node.js', 'SignalR', 'ASP.NET', 'ASP.NET Core', 'Google Cloud Platform'],
         'Tools': ['Git', 'SVN', 'Postman', 'Visual Studio Code', 'Unity'],
     };
 

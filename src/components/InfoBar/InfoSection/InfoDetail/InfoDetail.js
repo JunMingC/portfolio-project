@@ -25,7 +25,7 @@ const InfoDetail = () => {
 
     const infos = {
         residence: 'Malaysia',
-        city: 'Selangor',
+        state: 'Selangor',
         age: age,
         email: 'jm96.chan@gmail.com',
     };
